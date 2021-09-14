@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  postgre-dev:
+    image: postgres:latest
+    restart: on-failure
+    container_name: postgres-dev-container
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=sector_db
+    ports:
+      - '5432:5432'
